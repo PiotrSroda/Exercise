@@ -4,26 +4,31 @@ import '../App.css';
 
 
 class User2 extends Component {
-renderList() {
-  if (!this.props.task) {
-    return <div></div>
-  }
-  return this.props.task.map((task) => {
-  return(
-      <li
-    className="list-item">{task.name}
-    </li>
-    )
-  });
-  }
-  render () {
+  renderList() {
+    const tasks = this.props.tasks
+    if (tasks === ['']) {
+      return <div></div>
+    }
+    return tasks.map((task) => {
     return(
-    <ul className ="task-list-user2">
-      {this.renderList()}
-    </ul>
-    )
-  }
-  }
+        <li
+      key={task}
+      className="list-item">{task}
+      </li>
+      )
+    });
+    }
+    render () {
+      return(
+      <ul className ="task-list-user2 border border-white ">
+        {this.renderList()}
+        <div className="podiumNumber text-white">
+          2
+        </div>
+      </ul>
+      )
+    }
+    }
 
 
 
