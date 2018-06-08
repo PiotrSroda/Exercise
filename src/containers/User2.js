@@ -13,7 +13,7 @@ class User2 extends Component {
     return(
         <li
       key={task}
-      className="list-item text-white bg-dark">{task}
+      className="list-item">{task}
       </li>
       )
     });

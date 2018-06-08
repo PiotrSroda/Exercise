@@ -9,8 +9,10 @@ class Button extends Component {
     };
 
     this.showMenu = this.showMenu.bind(this);
+    this.closeMenu = this.closeMenu.bind(this);
 
   }
+
 
   showMenu(event) {
     event.preventDefault();
@@ -19,6 +21,12 @@ class Button extends Component {
       document.addEventListener('click', this.closeMenu);
     });
   }
+
+  closeMenu() {
+      this.setState({ showMenu: false }, () => {
+        document.removeEventListener('click', this.closeMenu);
+      });
+    }
 
 
   onUser1Click(task) {
@@ -33,14 +41,14 @@ class Button extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.showMenu} className="btn btn-primary btn-sm list-item">
-          
-        </button>
+        <div onClick={this.showMenu} className="btn-nam">
+        <div className = "buttonName">◄</div>
+        </div>
 
         {
           this.state.showMenu
             ? (
-              <div
+              <div className ="menu"
 
                 ref={(element) => {
                   this.dropdownMenu = element;

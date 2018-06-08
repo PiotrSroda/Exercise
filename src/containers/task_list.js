@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import Button from '../components/button'
+import ico from '../completed-tasks-hand-drawn-clipboard-sign-with-verification-mark.svg'
 
 
 export default class TaskList extends Component {
@@ -23,10 +24,13 @@ export default class TaskList extends Component {
     return(
 
         <li
-          className="list-item text-white bg-dark"
+          className="list-item "
           key={task}
           >
-    <div className="rowB" >{task}
+    <div className="rowB" >
+      <img src = {ico} className = 'icotask'/><p className = "task-name">
+      {task}
+    </p>
       <div className = "buttonPosition"><Button
         tasks = {task}
         onUser1Select = {() => this.onUser1Click(task)}
@@ -39,9 +43,10 @@ export default class TaskList extends Component {
     }
     render () {
       return(
+
       <ul
         className ="task-list container"
-      >
+      ><h2 className = "headerClass">To do</h2>
         {this.renderList()}
       </ul>
       )

@@ -11,7 +11,7 @@ export default class App extends Component {
     super (props);
 
   this.state = {
-    task: ['Task1','Task2','Task3','Task4','Task5','Task6','Task7','Task8','Task9','Task10','Task11','Task12','Task13','Task14','Task15'],
+    task: ['Task 1','Task 2','Task 3','Task 4','Task 5','Task 6','Task 7','Task 8','Task 9','Task 10','Task 11','Task 12','Task 13','Task 14','Task 15'],
     user1: [],
     user2: [],
     user3: [],
@@ -20,7 +20,7 @@ export default class App extends Component {
 
   }
 
-  render() {    
+  render() {
     return (
       <div>
       <div className="container">

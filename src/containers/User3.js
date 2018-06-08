@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import '../App.css';
 
 
@@ -13,7 +12,10 @@ class User3 extends Component {
     return(
         <li
       key={task}
-      className="list-item text-white bg-dark">{task}
+      className="list-item">
+      <p className = "task-name">
+      {task}
+      </p>
       </li>
       )
     });
