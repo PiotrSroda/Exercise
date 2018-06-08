@@ -1,0 +1,68 @@
+.rowB{
+  display:flex;
+  flex-direction:row;
+}
+
+.task-list {
+  padding: 3px;
+  position: relative;
+  margin: 10px;
+  height: 360px;
+  width: 250px;
+  background-color: blue;
+  border: 2px solid black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.list-item {
+  margin: 4px;
+  height: 5.5%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+  font-family: sans-serif;
+  list-style-type:none;
+
+}
+
+.task-list-user1 {
+  padding: 3px;
+  position: relative;
+  margin: 1px;
+  height: 360px;
+  width: 250px;
+  background-color: blue;
+  border: 2px solid black;
+  margin-left: auto;
+  margin-right: auto;
+}
+.task-list-user2 {
+  padding: 3px;
+  position: relative;
+  margin: 45px;
+  height: 360px;
+  width: 250px;
+  background-color: blue;
+  border: 2px solid black;
+  margin-left: auto;
+  margin-right: auto;
+}
+.task-list-user3 {
+  padding: 3px;
+  position: relative;
+  margin: 90px;
+  height: 360px;
+  width: 250px;
+  background-color: blue;
+  border: 2px solid black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+body {
+    margin: 10px;
+}
