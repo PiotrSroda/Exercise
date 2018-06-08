@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import _ from 'lodash';
 
 import TaskList from './containers/task_list';
 import User1 from './containers/User1';
@@ -19,22 +20,30 @@ export default class App extends Component {
 
   }
 
-  render() {
-    console.log(this.state.user1)
+  render() {    
     return (
       <div>
       <div className="container">
       <TaskList
       tasks = {this.state.task}
-      onTaskSelect = {task => this.setState({
-        user1: [...this.state.user1, task]
+      onUser1Select = {task => this.setState({
+        user1: [...this.state.user1, task],
+        task: _.pull(this.state.task, task),
+      })}
+      onUser2Select = {task => this.setState({
+        user2: [...this.state.user2, task],
+        task: _.pull(this.state.task, task),
+      })}
+      onUser3Select = {task => this.setState({
+        user3: [...this.state.user3, task],
+        task: _.pull(this.state.task, task),
       })}
       />
       </div>
       <div className="rowB">
-      <User2 />
+      <User2 tasks = {this.state.user2}/>
       <User1 tasks = {this.state.user1}/>
-      <User3 />
+      <User3 tasks = {this.state.user3}/>
       </div>
       </div>
     );

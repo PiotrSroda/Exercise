@@ -13,7 +13,8 @@ renderList() {
   return tasks.map((task) => {
   return(
       <li
-    className="list-item">{task}
+    key={task}
+    className="list-item text-white bg-dark">{task}
     </li>
     )
   });
@@ -22,6 +23,9 @@ renderList() {
     return(
     <ul className ="task-list-user1">
       {this.renderList()}
+      <div className="podiumNumber text-white">
+        1
+      </div>
     </ul>
     )
   }
